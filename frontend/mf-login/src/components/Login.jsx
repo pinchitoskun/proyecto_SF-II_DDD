@@ -93,7 +93,7 @@ const Login = () => {
                       marginTop: "10px",
                     }}
                   >
-                    Login
+                    Sign in
                   </Button>
                 </div>
               </Form>
@@ -111,7 +111,7 @@ const Login = () => {
                   to={"/register"}
                   style={{ color: "#23294B", fontWeight: "bold" }}
                 >
-                  Register
+                  Sign up
                 </Link>
               </div>
             </div>
