@@ -4,7 +4,7 @@ const Dotenv = require("dotenv-webpack");
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:8083/",
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = (_, argv) => ({
   },
 
   devServer: {
-    port: 8080,
+    port: 8083,
     historyApiFallback: true,
   },
 
@@ -41,14 +41,12 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "host",
+      name: "mf_signup",
       filename: "remoteEntry.js",
-      remotes: {
-        mf_login: "mf_login@http://localhost:8081/remoteEntry.js",
-        mf_loader: "mf_loader@http://localhost:8082/remoteEntry.js",
-        mf_signup: "mf_signup@http://localhost:8083/remoteEntry.js",
+      remotes: {},
+      exposes: {
+        "./SignUp": "./src/components/SignUp.jsx",
       },
-      exposes: {},
       shared: {
         ...deps,
         react: {

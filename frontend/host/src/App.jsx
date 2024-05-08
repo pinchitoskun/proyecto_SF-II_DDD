@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Loader from "mf_loader/Loader";
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
+const SignUpPage = lazy(() => import("./pages/SignUpPage"));
 
 const App = () => (
   <Router>
@@ -14,6 +15,14 @@ const App = () => (
         element={
           <Suspense fallback={<Loader />}>
             <LoginPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <Suspense fallback={<Loader />}>
+            <SignUpPage />
           </Suspense>
         }
       />
