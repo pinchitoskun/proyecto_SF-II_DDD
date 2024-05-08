@@ -1,4 +1,4 @@
-package edu.uptc.swii.usermgmt;
+package edu.uptc.swii.shiftsmgmt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,12 +9,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 @EnableDiscoveryClient
-@ComponentScan (basePackages = {"edu.uptc.swii.usermgmt"})
+@ComponentScan (basePackages = {"edu.uptc.swii.shiftsmgmt"})
 @SpringBootApplication
-public class UsermgmtApplication {
+public class ShiftsmgmtApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UsermgmtApplication.class, args);
+		SpringApplication.run(ShiftsmgmtApplication.class, args);
 	}
 	
 	@Bean
